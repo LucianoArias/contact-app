@@ -1,0 +1,39 @@
+﻿@model ContactApp.Models.Contact
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>Nuevo Contacto</h4>
+            </div>
+            <div class="panel-body">
+                <form action="@Url.Action("Register", "Contact")" method="post">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" name="Name" />
+                    </div>
+                    <div class="form-group">
+                        <label>Apellido</label>
+                        <input type="text" class="form-control" name="LastName" />
+                    </div>
+                    <div class="form-group">
+                        <label>Telefono</label>
+                        <input type="text" class="form-control" name="Phone" />
+                    </div>
+                    <div class="form-group">
+                        <label>Correo</label>
+                        <input type="text" class="form-control" name="Email" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <a class="btn btn-warning" href="@Url.Action("Home", "Contact")">Volver</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
